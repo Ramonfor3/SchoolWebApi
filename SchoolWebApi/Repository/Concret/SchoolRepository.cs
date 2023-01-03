@@ -30,17 +30,22 @@ namespace Repository.Concret
         }
 
 
-
-        public async Task<Student> FindById(int id)
+        public override async Task<Student> FindByIdAsync(object Id)
         {
-            return await context.Students.FindAsync(id);
+            return await context.Students.FindAsync(Id);
         }
 
-
-        public async Task<Student> Update(int id,Student entity)
+        public override void Delete(Student entity)
         {
             context.Students.Update(entity);
-            await context.SaveChangesAsync();
+            context.SaveChanges();
+
+        }
+
+        public override Student Update(Student entity)
+        {
+            context.Students.Update(entity);
+            context.SaveChangesAsync();
 
             return entity; 
         }
