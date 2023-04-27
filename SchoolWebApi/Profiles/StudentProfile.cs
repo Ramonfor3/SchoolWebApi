@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using Dtos;
-using SchoolWebApi.Dtos;
+using SchoolWebApi.Dtos.StudentsDto;
 using SchoolWebApi.Models;
 
-namespace DataAccess
+namespace SchoolWebApi
 {
     public class StudentProfile : Profile
     {

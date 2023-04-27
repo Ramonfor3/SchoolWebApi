@@ -1,4 +1,4 @@
-﻿namespace Dtos
+﻿namespace SchoolWebApi.Dtos.StudentsDto
 {
     public class CreateStudentDto
     {

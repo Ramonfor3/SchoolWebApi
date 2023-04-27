@@ -1,4 +1,4 @@
-﻿namespace SchoolWebApi.Dtos
+﻿namespace SchoolWebApi.Dtos.StudentsDto
 {
     public class UpdateStudentDto
     {

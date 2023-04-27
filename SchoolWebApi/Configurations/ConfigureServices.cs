@@ -12,11 +12,6 @@ namespace Configurations
     {
         public static void ConfigureService(this IServiceCollection service, IConfiguration configuration)
         {
-            //service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-            //service.AddTransient<ISchoolRepository, SchoolRepository>();
-            //service.AddTransient<ISchoolService, SchoolService>();
-
         }
     }
 }

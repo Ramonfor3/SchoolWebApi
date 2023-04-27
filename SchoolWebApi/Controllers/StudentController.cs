@@ -1,8 +1,9 @@
-﻿using Dtos;
-using Microsoft.AspNetCore.Mvc;
-using SchoolWebApi.Dtos;
+﻿using Microsoft.AspNetCore.Mvc;
+using SchoolWebApi.Dtos.StudentsDto;
+using SchoolWebApi.Response;
 using Services.Abstract;
 
+[assembly: ApiConventionType(typeof(DefaultApiConventions))]
 namespace SchoolWebApi
 {
     [Route("api/[controller]")]
@@ -10,15 +11,15 @@ namespace SchoolWebApi
     public class StudentController : ControllerBase
     {
 
-        private readonly ISchoolService _schoolService;
+        private readonly IStudentService _schoolService;
 
-        public StudentController(ISchoolService schoolService)
+        public StudentController(IStudentService schoolService)
         {
             _schoolService = schoolService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync() =>  Ok(await _schoolService.GetAllAsync());
+        public async Task<ApiResponse<StudentDto>>  GetAllAsync() =>  await _schoolService.GetAllAsync();
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOne(int id) => Ok(await _schoolService.FindByIdAsync(id));

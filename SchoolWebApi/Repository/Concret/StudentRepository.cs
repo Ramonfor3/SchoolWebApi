@@ -7,11 +7,11 @@ using Zsoft.GenericRepositoryLibrary;
 
 namespace Repository.Concret
 {
-    public class SchoolRepository : GenericRepository<SchoolDbContext, Student>, ISchoolRepository
+    public class StudentRepository : GenericRepository<SchoolDbContext, Student>, IStudentRepository
     {
         private readonly SchoolDbContext context;
 
-        public SchoolRepository(SchoolDbContext context): base(context)
+        public StudentRepository(SchoolDbContext context): base(context)
         {
             this.context = context;
         }
