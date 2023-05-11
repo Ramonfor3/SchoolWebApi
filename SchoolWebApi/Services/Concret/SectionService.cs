@@ -1,6 +1,9 @@
-﻿namespace SchoolWebApi.Services.Concret
+﻿using SchoolWebApi.Services.Abstract;
+
+namespace SchoolWebApi.Services.Concret
 {
-    public class SectionService
+    public class SectionService:ISectionService
     {
+
     }
 }

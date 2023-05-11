@@ -1,6 +1,11 @@
-﻿namespace SchoolWebApi.Dtos.SubjectDtos
+﻿using SchoolWebApi.Dtos.CarrerDtos;
+
+namespace SchoolWebApi.Dtos.SubjectDtos
 {
-    public class SubjectDto
+    public class SubjectDto:BaseDto
     {
+        public string Name { get; set; }
+        public CareerDto Career { get; set; }
+
     }
 }

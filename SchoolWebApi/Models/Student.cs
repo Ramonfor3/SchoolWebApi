@@ -12,6 +12,6 @@ namespace SchoolWebApi.Models
         public int Age { get; set; }
         public string Address { get; set; }
         public string StudentIdentify { get; set; }
-        public List<Career> Careers { get; set; }
+        public Career Career { get; set; }
     }
 }
